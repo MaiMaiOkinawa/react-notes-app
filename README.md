@@ -1,1 +1,1 @@
-# react_notes-app
+# react-notes-app
