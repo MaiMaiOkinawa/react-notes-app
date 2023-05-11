@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Muli', sans-serif,BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 'dark-mode' class settings */
+.dark-mode {
+  background-color: black;
+}
+
+.dark-mode h1 {
+  color: #ccc;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: rgb(233, 233, 233);
+  border-radius: 25px;
+  font-family: inherit;
+  padding: 10px 5px;
+  margin-bottom: 1.5em;
+}
+
+.search input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
+  min-height: 100vh;
+}
+
+.notes-list {
+  display: grid;
+  grid-gap: 1rem;
+  /*
+  # of columns do you need 
+  columns addjust automatically
+  column size min - 250px max - 1fr
+  */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+textarea {
+  background-color: transparent;
+  border: none;
+  resize: none; /* The expandable corner */
+  font-family: inherit;
+  font-size: 15px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.save {
+  cursor: pointer;
+  background-color: #FFF85F;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 32px;
+}
+
+.save:hover {
+  background-color: #e9e256;
+}
+
+.note.new {
+  background-color: #30DDCE;
+}
+
+.note {
+  background-color: #FFF85F;
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* To keep line space in the notes */
+  white-space: pre-wrap;
+}
+
+/* <-- white-space -->
+ https://developer.mozilla.org/en-US/docs/Web/CSS/white-space 
+ */
+
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.delete-icon {
+  cursor: pointer;
+}
+
+/* .delete-icon:hover {
+  color: #ccc;
+} */
+
